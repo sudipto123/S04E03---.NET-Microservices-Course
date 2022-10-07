@@ -1,0 +1,2 @@
+//specify the Dot Net SDK version
+dotnet new webapi -n PlatformService -f net5.0 
