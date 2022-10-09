@@ -7,3 +7,10 @@ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.8
 dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.8
 dotnet add package Microsoft.EntityFrameworkCore.InMemory -v 5.0.8
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 5.0.8
+
+//Docker
+docker build -t sudiptodutta92/platformservice . // Build an image
+docker run -p 8090:80 -d sudiptodutta92/platformservice // Run an image
+docker ps // Show the list of running images
+docker stop 8e392d142842 // Stop an running image
+docker start 8e392d142842 // Start an existing image
