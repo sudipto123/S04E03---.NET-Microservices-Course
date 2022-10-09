@@ -14,3 +14,7 @@ docker run -p 8090:80 -d sudiptodutta92/platformservice // Run an image
 docker ps // Show the list of running images
 docker stop 8e392d142842 // Stop an running image
 docker start 8e392d142842 // Start an existing image
+
+//Kubernetes
+kubectl apply -f platforms-depl.yaml
+kubectl get deployments
