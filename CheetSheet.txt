@@ -9,11 +9,19 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory -v 5.0.8
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 5.0.8
 
 //Docker
+
+//platformservice
 docker build -t sudiptodutta92/platformservice . // Build an image
+docker push sudiptodutta92/platformservice // Push Docker Image to Docker Hub
 docker run -p 8090:80 -d sudiptodutta92/platformservice // Run an image
 docker ps // Show the list of running images
 docker stop 8e392d142842 // Stop an running image
 docker start 8e392d142842 // Start an existing image
+
+//commandsservice
+docker build -t sudiptodutta92/commandsservice . // Build an image
+docker push sudiptodutta92/commandsservice // Push Docker Image to Docker Hub
+docker run -p 8080:80 sudiptodutta92/commandsservice // Run the image
 
 //Kubernetes
 kubectl apply -f platforms-depl.yaml
