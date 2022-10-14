@@ -26,3 +26,8 @@ docker run -p 8080:80 sudiptodutta92/commandsservice // Run the image
 //Kubernetes
 kubectl apply -f platforms-depl.yaml
 kubectl get deployments
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.4.0/deploy/static/provider/aws/deploy.yaml
+kubectl get services
+kubectl get namespace 
+kubectl get pods --namespace=ingress-nginx
+ kubectl get services --namespace=ingress-nginx
