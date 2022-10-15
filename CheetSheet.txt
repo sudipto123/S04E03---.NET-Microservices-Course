@@ -30,4 +30,8 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 kubectl get services
 kubectl get namespace 
 kubectl get pods --namespace=ingress-nginx
- kubectl get services --namespace=ingress-nginx
+kubectl get services --namespace=ingress-nginx
+kubectl get pvc
+kubectl create secret generic mssql --from-literal=SA_PASSWORD="pa55w0rd!"
+kubectl delete -f mssql-plat-depl.yaml
+kubectl delete secret mssql
